@@ -1,0 +1,332 @@
+/* Reset some default styles */
+body, h1, h2, p, a, ul, li, header, section, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    position: relative;
+}
+
+.top-image img {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    background: #343a40;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #495057;
+}
+
+/* Hero Section */
+.hero-section {
+    background: #6c757d;
+    color: #7a1111;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 50px 20px;
+    background: #e9ecef;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Infrastructure Section */
+.infrastructure-section {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.infrastructure-section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.infrastructure-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.infrastructure-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.infrastructure-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.infrastructure-item:hover {
+    transform: scale(1.05);
+}
+
+.infrastructure-description {
+    margin-top: 20px;
+}
+
+/* Core Values Section */
+.core-values-section {
+    position: relative;
+    padding: 50px 20px;
+    color: #070569;
+    text-align: center;
+    overflow: hidden; /* Prevents the pseudo-element from extending beyond the section */
+}
+
+/* Background image with reduced opacity */
+.core-values-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./Assets/backgorund.JPG') no-repeat center center/cover;
+    opacity: 0.175; /* Adjust this value to control the transparency of the background */
+    z-index: 1;
+}
+
+/* Ensuring content appears above the pseudo-element */
+.core-values-section * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.core-values-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.core-values-content p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background: #e9ecef;
+    text-align: center;
+}
+
+.map-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+.contact-footer a {
+    color: #adb5bd;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.contact-footer a:hover {
+    color: #f8f9fa;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+#scroll-top:hover {
+    background: #0056b3;
+}
+/* CSS for "Why Choose Us" Section */
+.why-choose-us-section {
+    background-color: #5c6bc0; /* A calming shade of blue-purple to differentiate the section */
+    color: #fff;
+    padding: 50px 0;
+}
+
+.why-choose-us-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffeb3b; /* Highlight color to make the title pop */
+}
+
+.why-choose-us-section p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #e0f7fa; /* Light color for readability */
+}
+
+.why-choose-us-section ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.why-choose-us-section ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    color: #ffffff; /* Main text color */
+}
+
+.why-choose-us-section ul li::before {
+    content: "✓"; /* Custom checkmark symbol */
+    color: #ffeb3b; /* Highlight color for bullet points */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+
+.why-choose-us-section .mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.why-choose-us-section .lead {
+    text-align: justify; /* Better text alignment for readability */
+}
+
+@media (max-width: 768px) {
+    .why-choose-us-section h2 {
+        font-size: 2rem; /* Responsive font size for smaller devices */
+    }
+
+    .why-choose-us-section ul li {
+        font-size: 1rem; /* Smaller font size for mobile view */
+    }
+}

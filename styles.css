@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Global Reset */
 body, h1, h2, p, a, ul, li, header, section, footer {
     margin: 0;
     padding: 0;
@@ -10,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    padding-top: 150px; /* For fixed header */
 }
 
 /* Header */
@@ -18,6 +19,10 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
 }
 
 .top-image img {
@@ -25,6 +30,7 @@ header {
     height: auto;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -38,10 +44,10 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -59,7 +65,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero-section {
-    background: #ececec;
+    background: #C13758;
     padding: 20px;
     text-align: center;
 }
@@ -91,7 +97,8 @@ nav ul li a:hover {
 /* About Section */
 .about-section {
     padding: 20px;
-    background: #fff;
+    background: #3CA8A4;
+    color: white;
     text-align: center;
 }
 
@@ -101,39 +108,47 @@ nav ul li a:hover {
 
 /* Gallery Section */
 .gallery-section {
-    padding: 20px;
-    background: #fff;
+    padding: 40px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 0;
-    margin: 0;
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.gallery-item {
+.carousel {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-inner {
     position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    background: #eaeaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Infrastructure Section */
@@ -147,8 +162,6 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
-    padding: 0;
-    margin: 0;
 }
 
 .infrastructure-item {
@@ -164,7 +177,7 @@ nav ul li a:hover {
 .infrastructure-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
+    object-fit: cover;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
@@ -264,7 +277,7 @@ footer {
 /* WhatsApp Icon */
 .whatsapp-icon {
     position: fixed;
-    bottom: 80px; /* Adjusted to be above the scroll-to-top button */
+    bottom: 80px;
     right: 20px;
 }
 
@@ -276,7 +289,7 @@ footer {
 /* Scroll to Top Button */
 #scroll-top {
     position: fixed;
-    bottom: 20px; /* Adjusted to be below the WhatsApp icon */
+    bottom: 20px;
     right: 20px;
     background: #007bff;
     color: #fff;
@@ -347,4 +360,15 @@ footer {
 
 #piracy-policy-link:hover {
     text-decoration: underline;
+}
+
+/* Font for Major Sections */
+#major {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #E7BC45; /* Set the text color */
+    background-color:  #E7BC45; /* Set the background color */
 }
